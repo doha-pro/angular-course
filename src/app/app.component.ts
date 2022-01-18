@@ -9,12 +9,9 @@ import { ProductDetails } from './_models/product.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  // faCoffee = faCoffee;
+
   title = 'day2';
-  // productDetails:Object={ 
-  //   products:[],
-  //   itemsNumber:0
-  // }
+ 
   productDetails:ProductDetails={
     products:[],itemsNumber:0,Total:0
   }

@@ -12,6 +12,7 @@ import { ItemListingChildComponent } from './body/item-listing-child/item-listin
 import { ItemListingParentComponent } from './body/item-listing-parent/item-listing-parent.component';
 import { PagingComponent } from './body/paging/paging.component';
 import { FiltersComponent } from './body/filters/filters.component';
+import { ProductServices } from './_services/product.services';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { FiltersComponent } from './body/filters/filters.component';
     ,FontAwesomeModule
     
   ],
-  providers: [],
+  providers: [ProductServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

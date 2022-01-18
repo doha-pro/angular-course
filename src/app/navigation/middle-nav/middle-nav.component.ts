@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Product, ProductDetails } from 'src/app/_models/product.model';
+import { ProductServices } from 'src/app/_services/product.services';
 
 @Component({
   selector: 'app-middle-nav',
@@ -9,10 +10,19 @@ import { Product, ProductDetails } from 'src/app/_models/product.model';
 export class MiddleNavComponent implements OnInit {
 cartIsOpen=false;
 
-  constructor() { }
-  @Input() cart!:ProductDetails
+  constructor(private productService:ProductServices) { }
+  @Input() 
+  cart!:ProductDetails
 
   ngOnInit(): void {
+    // this.productService.itemAdded.subscribe(
+      // next()=>{}
+    // )
+
+    // console.log(this.productService.itemAdded.subscribe())
+    // this.cart.products=this.productService.cartArray
+
+    // this.productService.itemadd
   }
   
   delete(index:number){
