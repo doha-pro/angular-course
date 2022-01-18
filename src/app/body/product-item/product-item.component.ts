@@ -17,7 +17,7 @@ itemAdded:EventEmitter<Product>=new EventEmitter <Product>();
   ngOnInit(): void {
   }
   onAddToCartPressed(){
-    console.log(this.productItem)
+   
     this.itemAdded.emit(this.productItem)
     
   }

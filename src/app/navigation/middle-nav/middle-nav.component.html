@@ -36,18 +36,19 @@
                         <!-- item data -->
                         <div class="item-small-1__data">
                             <!-- title -->
-                            <a href="" class="item-small-1__title"> {{product?.name}} </a>
+                            <a href="" class="item-small-1__title"> {{product?.name}} x{{product?.qnty}} </a>
                             <!-- price -->
                             <span class="item-small-1__description">
-                                   {{product.discount? product.price-product.discount: product.price}}
+
+                                   {{product.discount? (product.price-product.discount)*product.qnty: product.price*product.qnty}}
                                 </span>
                         </div>
                         <!-- item image -->
                         <div class="item-small-1__image-box">
                             <a href="#" class="item-small-1__image image" [attr.style]="'background-image: url('+product.imageUrl">
                             </a>
-                            <a href="#" class="item-small-1__action">
-                                <i class="fas fa-times" (click)="delete(i)"></i>
+                            <a (click)="delete(i)" href="#" class="item-small-1__action">
+                                <i class="fas fa-times"></i>
                             </a>
                         </div>
                     </div>
@@ -58,7 +59,7 @@
             <div class="separator"></div>
             <div class="block">
                 <span class="lable">Total:</span>
-                <span class="lable">$2870</span>
+                <span class="lable">${{totalPrice}</span>
             </div>
             <!-- actions -->
             <div class="block list list--hr">

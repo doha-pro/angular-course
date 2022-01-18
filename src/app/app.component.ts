@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Product } from './_models/product.model';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+// import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -8,13 +8,30 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  faCoffee = faCoffee;
+  // faCoffee = faCoffee;
   title = 'day2';
   products:Product[]=[];
 
 onItemAddedFromList(product:Product){
-  console.log(product)
-  this.products.push(product);
+ 
+  if(this.products.length===0){
+    this.products.push(product);
+  
+  }else{
+    let found= this.products.find(x => x.name == product.name);
+    found? found.qnty++ :this.products.push(product)
+      
+    
+    }
+    
+  }
 
-}
+  
+
+  
+  // console.log(found.qnty)
+  
+  // console.log(this.products)
+
+
 }

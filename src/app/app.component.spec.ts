@@ -4,7 +4,6 @@ import { AppComponent } from './app.component';
 
 
 
-
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -33,6 +32,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
+  
     expect(compiled.querySelector('.content span')?.textContent).toContain('day2 app is running!');
   });
 });

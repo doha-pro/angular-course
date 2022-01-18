@@ -3,5 +3,6 @@ export interface Product{
     price :number,
     description:string,
     discount ?:number,
-    imageUrl:string
+    imageUrl:string, 
+    qnty:number
 }

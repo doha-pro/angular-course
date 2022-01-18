@@ -27,7 +27,8 @@ import { FiltersComponent } from './body/filters/filters.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,FontAwesomeModule
+    AppRoutingModule
+    ,FontAwesomeModule
     
   ],
   providers: [],

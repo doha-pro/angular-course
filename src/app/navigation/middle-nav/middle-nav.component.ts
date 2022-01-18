@@ -11,15 +11,27 @@ cartIsOpen=false;
   constructor() { }
   @Input() cart!:Product[];
 
+// totalPrice:number=this.Total()
+// Total():number {
+//   this.totalPrice=0
+//   for (let i in this.cart){
+//     this.cart[i].discount ? 
+//     this.totalPrice=this.totalPrice+(this.cart[i].price *this.cart[i].qnty)
+    
+//     :
+// this.totalPrice=this.totalPrice+(this.cart[i].price *this.cart[i].qnty)
+//   }
+//   return this.totalPrice
+//   }
+
   ngOnInit(): void {
   }
   
-//   delete(index: number) {
-//     this.cart.removeItem(index);
-// }
+
+
 
   delete(index:number){
-    this.cart=this.cart.splice(index, 1)
+    this.cart.splice(index, 1)
   }
 
 }
