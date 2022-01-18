@@ -17,12 +17,13 @@
     </div>
     <!-- shopping card dropdown -->
     <!-- dropdown--opened to open -->
+
     <div class="dropdown dropdown--left" [ngClass]="{'dropdown--opened': cartIsOpen}" (click)="cartIsOpen=!cartIsOpen">
         <!-- header -->
         <div class="dropdown__header">
             <div class="image image--small" style="background-image: url('../../../assets/img/icons/download.png')">
                 <div class="notification notification--danger">
-                    {{cart.length}}
+                    {{cart?.itemsNumber}}
                 </div>
             </div>
         </div>
@@ -30,7 +31,8 @@
         <div class="dropdown__body">
             <!-- items -->
             <ul class="dropdown__items list list--vr-separator">
-                <li *ngFor="let product of cart let i=index" class="dropdown__item list__item">
+
+                <li *ngFor="let product of cart?.products let i=index" class="dropdown__item list__item">
                     <!-- item small 2 -->
                     <div class="item-small-1">
                         <!-- item data -->
@@ -59,7 +61,7 @@
             <div class="separator"></div>
             <div class="block">
                 <span class="lable">Total:</span>
-                <span class="lable">${{totalPrice}</span>
+                <span class="lable">${{cart?.Total}</span>
             </div>
             <!-- actions -->
             <div class="block list list--hr">

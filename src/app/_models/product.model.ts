@@ -6,3 +6,8 @@ export interface Product{
     imageUrl:string, 
     qnty:number
 }
+export interface ProductDetails{
+    products:Product[],
+    itemsNumber:number,
+    Total:number
+}
