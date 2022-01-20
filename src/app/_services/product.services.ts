@@ -1,6 +1,8 @@
+import { EventEmitter } from "@angular/core";
 import { Product } from "../_models/product.model";
 
 export class ProductServices{
+    itemAdded:EventEmitter<Product>=new EventEmitter<Product>();
     productArray:Product[]=[ 
         {id:1 ,name:"one",price:100,description:"This is number one",discount:50,qnty:1,imageUrl:"https://picsum.photos/200/100"},
         {id:2,name:"two",price:200,description:"This is number one",discount:50,imageUrl:"https://picsum.photos/200/200",qnty:1},

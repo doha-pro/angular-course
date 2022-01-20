@@ -13,7 +13,8 @@
 <!-- items -->
 <div class="item-listing__items item-listing--3items">
     <!-- <app-product-item *ngFor="let item of productArray" [productItem]="item" class="item-medium-1"> </app-product-item> -->
-    <app-product-item (itemAdded)="onItemAdded($event)" *ngFor="let item of productArray" [productItem]="item" class="item-medium-1"> </app-product-item>
+    <!-- <app-product-item (itemAdded)="onItemAdded($event)" *ngFor="let item of productArray" [productItem]="item" class="item-medium-1"> </app-product-item> -->
+    <app-product-item *ngFor="let item of productArray" [productItem]="item" class="item-medium-1"> </app-product-item>
 
 </div>
 <app-paging class="paging"></app-paging>

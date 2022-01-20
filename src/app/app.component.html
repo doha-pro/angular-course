@@ -1,10 +1,14 @@
 <div class="header">
     <app-top-nav class="header__upper"></app-top-nav>
-    <app-middle-nav [cart]="productDetails" class="header__middle container"></app-middle-nav>
+    <app-middle-nav [productDetails]="productDetails" class="header__middle container"></app-middle-nav>
     <app-bottom-nav class="header__lower container"></app-bottom-nav>
 </div>
-<div class="container">
+<router-outlet> </router-outlet>
+
+
+<!-- day3  -->
+<!-- <div class="container">
 
     <app-filters class="filters"></app-filters>
     <app-item-listing-parent (itemAddedFromList)="onItemAddedFromList($event)" class="item-listing "></app-item-listing-parent>
-</div>
+</div> -->

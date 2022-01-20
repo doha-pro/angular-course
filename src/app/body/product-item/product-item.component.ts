@@ -11,14 +11,15 @@ export class ProductItemComponent implements OnInit {
 @Input ()
 productItem !:Product;
 
-@Output()
-itemAdded:EventEmitter<Product>=new EventEmitter <Product>();
+// @Output()
+// itemAdded:EventEmitter<Product>=new EventEmitter <Product>();
   constructor(private productService:ProductServices) { }
 
   ngOnInit(): void {
   }
   onAddToCartPressed(){
-    this.productService.additemToCart(this.productItem)
+    // this.productService.additemToCart(this.productItem)
+    this.productService.itemAdded.emit(this.productItem)
    
     // this.itemAdded.emit(this.productItem)
     

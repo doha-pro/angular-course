@@ -13,6 +13,8 @@ import { ItemListingParentComponent } from './body/item-listing-parent/item-list
 import { PagingComponent } from './body/paging/paging.component';
 import { FiltersComponent } from './body/filters/filters.component';
 import { ProductServices } from './_services/product.services';
+import { ProductContainerComponent } from './body/product-container/product-container.component';
+import { ProductDetailsComponent } from './body/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ProductServices } from './_services/product.services';
     ItemListingChildComponent,
     ItemListingParentComponent,
     PagingComponent,
-    FiltersComponent
+    FiltersComponent,
+    ProductContainerComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
