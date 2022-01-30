@@ -1,7 +1,7 @@
 <div *ngIf="productItem.discount" class="item-medium-1__alert">
     Sale</div>
 <div class="item-medium-1__image image" [style]="'background-image: url(' + productItem.imageUrl + ')'">
-    <a (click)="onAddToCartPressed()" href=" # " class="item-medium-1__action ">Add to Cart</a>
+    <a (click)="onAddToCartPressed()" class="item-medium-1__action ">Add to Cart</a>
 </div>
 <a [routerLink]="'/details'">
     <h4>{{productItem.name}}</h4>

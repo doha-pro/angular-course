@@ -15,6 +15,9 @@ import { FiltersComponent } from './body/filters/filters.component';
 import { ProductServices } from './_services/product.services';
 import { ProductContainerComponent } from './body/product-container/product-container.component';
 import { ProductDetailsComponent } from './body/product-details/product-details.component';
+import { RegisterationComponent } from './pages/registeration/registeration.component';
+import { LoginComponent } from './pages/login/login.component';
+import { AddProductComponent } from './pages/add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { ProductDetailsComponent } from './body/product-details/product-details.
     PagingComponent,
     FiltersComponent,
     ProductContainerComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    RegisterationComponent,
+    LoginComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
